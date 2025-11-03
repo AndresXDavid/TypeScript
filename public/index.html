@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>Instrumentos · Admin</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="/styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+     <div class="container">
+          <a class="navbar-brand" href="#">Instrumentos App</a>
+          <div class="d-flex gap-2">
+          <button id="btnInstruments" class="btn btn-outline-light btn-sm">Instrumentos</button>
+          <button id="btnTypes" class="btn btn-outline-light btn-sm">Tipos</button>
+          <button id="btnUsers" class="btn btn-outline-light btn-sm">Usuarios</button>
+          </div>
+     </div>
+     </nav>
+
+     <main class="container">
+     <div id="contentArea" class="card p-4">
+          <div class="text-center text-muted">Selecciona una sección.</div>
+     </div>
+     </main>
+
+     <!-- Modals (Add Instrument, Add Type, Add User) - SAME as earlier -->
+     <!-- Add Instrument Modal -->
+     <div class="modal fade" id="modalAddInstrument" tabindex="-1">
+     <div class="modal-dialog">
+          <div class="modal-content">
+          <form id="formAddInstrument">
+               <div class="modal-header">
+               <h5 class="modal-title">Agregar Instrumento</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+               <div class="mb-3">
+               <label class="form-label">Nombre</label>
+               <input name="name" class="form-control" required />
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Marca</label>
+               <input name="brand" class="form-control" />
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Año</label>
+               <input name="year" type="number" class="form-control" />
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Tipo</label>
+               <select name="type" class="form-select" required id="selectInstrumentType"></select>
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Detalles</label>
+               <textarea name="details" class="form-control"></textarea>
+               </div>
+               </div>
+               <div class="modal-footer">
+               <button type="submit" class="btn btn-primary">Guardar</button>
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+               </div>
+          </form>
+          </div>
+     </div>
+     </div>
+
+     <!-- Add Type Modal -->
+     <div class="modal fade" id="modalAddType" tabindex="-1">
+     <div class="modal-dialog">
+          <div class="modal-content">
+          <form id="formAddType">
+               <div class="modal-header">
+               <h5 class="modal-title">Agregar Tipo</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+               <div class="mb-3">
+               <label class="form-label">Nombre</label>
+               <input name="name" class="form-control" required />
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Descripción</label>
+               <textarea name="description" class="form-control"></textarea>
+               </div>
+               </div>
+               <div class="modal-footer">
+               <button class="btn btn-primary">Guardar</button>
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+               </div>
+          </form>
+          </div>
+     </div>
+     </div>
+
+     <!-- Add User Modal -->
+     <div class="modal fade" id="modalAddUser" tabindex="-1">
+     <div class="modal-dialog">
+          <div class="modal-content">
+          <form id="formAddUser">
+               <div class="modal-header">
+               <h5 class="modal-title">Agregar Usuario</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+               <div class="mb-3">
+               <label class="form-label">Nombre</label>
+               <input name="name" class="form-control" required />
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Email</label>
+               <input name="email" type="email" class="form-control" required />
+               </div>
+               <div class="mb-3">
+               <label class="form-label">Contraseña</label>
+               <input name="password" type="password" class="form-control" required />
+               </div>
+               </div>
+               <div class="modal-footer">
+               <button class="btn btn-primary">Guardar</button>
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+               </div>
+          </form>
+          </div>
+     </div>
+     </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="/js/app.js" type="module"></script>
+</body>
+</html>
